@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --darkcyan: hsl(179, 100%, 13%);
+    --transwhite: hsla(0, 0%, 100%, 0.75);
+    --gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+body {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    max-width: 50%;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid var(--orange);
+}
+
+header a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+main {
+    border-radius: 10px;
+    display: flex;
+    width: fit-content;
+    margin: 25px auto;
+    /* justify-content: center; */
+    align-items: flex-start;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+main div {
+    width: 350px;
+    height: 470px;
+    padding: 40px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+main div:first-of-type {
+    background-color: var(--orange);
+    color: var(--orange);
+}
+
+main div:nth-child(2) {
+    background-color: var(--cyan);
+    color: var(--cyan);
+}
+
+main div:last-of-type {
+    background-color: var(--darkcyan);
+    color: var(--darkcyan);
+}
+
+main h2 {
+    text-transform: uppercase;
+    margin: 30px 0px;
+    color: white;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+}
+
+main p {
+    color: var(--gray);
+    line-height: 30px;
+}
+
+main button {
+    margin-top: 80px;
+    border-radius: 30px;
+    outline: none;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    background-color: white;
+    cursor: pointer;
+    color: inherit;
+}
+
+main button:hover {
+    background-color: transparent;
+    border: 2px solid white;
+    color: var(--gray);
+}
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 85%;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+    }
+    main div {
+        width: 100%;
+        height: fit-content;
+    }
+}
+    

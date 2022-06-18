@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --pryred: hsl(0, 100%, 74%);
+    --prygreen: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkblue: hsl(249, 10%, 26%);
+    --grayishblue: hsl(246, 25%, 77%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    background-color: var(--pryred);
+    background-image: url('images/bg-intro-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+main > div {
+    flex: 1;
+}
+
+main div {
+    width: 100%;
+}
+
+main div.description {
+    text-align: center;
+}
+
+main div p {
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+main .form-container p:first-child {
+    background-color: var(--blue);
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    outline: none;
+    min-height: 50px;
+    cursor: pointer;
+    line-height: 25px;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.3);
+    /* border-bottom: 3px solid gray; */
+}
+
+main form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.3);
+}
+
+form div {
+    /* border: 2px solid hsla(248, 32%, 49%, 0.4);
+    border-radius: 10px; */
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+    padding: 5px; */
+    margin-bottom: 30px;
+    position: relative;
+    
+}
+
+form div input {
+    /* flex: 1; */
+    width: 100%;
+    padding: 15px 20px;
+    color: var(--darkblue);
+    font-size: 16px;
+    font-weight: 500;
+    /* border: none; */
+    border: 2px solid hsla(248, 32%, 49%, 0.4);
+    border-radius: 10px;
+}
+
+form div input:focus {
+    outline: none;
+}
+
+form div img {
+    display: none;
+    position: absolute;
+    right: 5%;
+    bottom: 30%;
+}
+
+form div input:focus:invalid {
+    border: 2px solid var(--pryred);
+}
+
+form div input:focus:valid {
+    border: 2px solid hsla(248, 32%, 49%, 0.8);
+}
+
+form div input:focus:invalid + img {
+    display: block;
+}
+
+form div input:focus:invalid ~ small {
+    display: block;
+    /* visibility: visible; */
+}
+
+small {
+    color: var(--pryred);
+    /* visibility: hidden; */
+    display: none;
+    margin-bottom: 15px;
+    text-align: right;
+    float: right;
+}
+
+
+
+form button {
+    display: block;
+    margin: 15px 0px;
+    width: 100%;
+    background-color: var(--prygreen);
+    color: white;
+    border: 2px solid hsl(154, 59%, 60%);
+    border-radius: 10px;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+form div input:required:invalid ~ button {
+    cursor: not-allowed;
+}
+
+.form-container p {
+    color: var(--grayishblue);
+    text-align: center;
+    margin: 0;
+}
+
+.form-container p a {
+    color: var(--pryred);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 750px) {
+    body {
+        background-image: url('images/bg-intro-desktop.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 25px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        color: white;
+    }
+
+    /* main > div {
+        max-width: 600px;
+    } */
+
+    main div.description {
+        text-align: left;
+    }
+
+    main .form-container p:first-child {
+        text-align: center;
+    }
+
+    .description h2 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .description p {
+        width: 75%;
+        margin: 30px 0px;
+    }
+    
+}
