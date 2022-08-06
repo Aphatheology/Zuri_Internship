@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* @font-face {
+    font-family: 'Averta';
+    src: url(AvertaDemo/AvertaDemo-Regular.otf);
+}
+@font-face {
+    font-family: 'AvertaBold';
+    src: url(AvertaDemo/AvertaDemo-ExtraBoldItalic.otf);
+} */
+
+body {
+  font-family: 'Averta', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+:root {
+    --color-primary:#e7332b;
+    --color-secondary:#514949;
+    --color-tertiary: #212529;
+    --color-neutral: #fffafa;
+    --color-white: #fff;
+}
+a{
+    text-decoration: none;
+}
+.primary-text{
+    color: var(--color-primary);
+}
+.primary-bg{
+    background-color: var(--color-primary);
+}
+.secondary-text{
+    color: var(--color-secondary);
+}
+.white-text{
+    color: var(--color-white);
+}
+.white-bg{
+    background-color: var(--color-white);
+}
+.align-text{
+    text-align: center;
+}
+
+
+.header {
+  background: url("./assets/hero-bg.svg") no-repeat center
+    center/cover;
+  min-height: 100vh;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-img {
+  display: block;
+  width: 20%;
+  margin: 0px auto;
+}
+
+.header-content {
+  margin: 4rem auto 0px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.header-content > * {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.header-content h1 {
+  color: #514949;
+  font-size: 28px;
+  margin: 0px auto 2rem;
+  padding: 10px 20px;
+}
+
+.header-content p {
+  color: #514949;
+  margin-bottom: 3rem;
+}
+
+.header-content p span {
+  color: #e7332b;
+}
+
+.header-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.each-button {
+  padding: 0.9rem;
+  border: none;
+  margin: 0 auto auto;
+  background-color: #e7332b;
+  color: white;
+  text-align: center;
+}
+
+.each-button:last-of-type {
+  background-color: white;
+  border: 1px solid #e7332b;
+  color: #e7332b;
+}
+.each-button a {
+  font-size: 16px;
+  color: white;
+}
+
+.each-button:last-of-type a {
+  color: #e7332b;
+}
+
+.each-button:hover,
+.each-button:hover a {
+  background-color: white;
+  color: #e7332b;
+}
+.each-button:hover {
+  border: 1px solid #e7332b;
+}
+.each-button:last-of-type:hover,
+.each-button:last-of-type:hover a {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.team-container{
+    margin-top: 3.5rem;
+}
+.dot{
+    display: none;
+}
+.team-header h4{
+    margin-bottom: 1rem;
+    font-weight: 100;
+    font-size: 12px;
+}
+.team-header h2{
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 100;
+    max-width: 90%;
+    width: 450px;
+    padding: 0 1rem;
+    margin: 0 auto 4rem auto;
+}
+.zuri-group{
+    padding: 1.5rem 0;
+}
+.training-container, .internship-container, .talent-container{
+    background-color: var(--color-neutral);
+    padding: 3.5rem 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.training, .internship, .talent{
+    height: 400px;
+}
+.training img, .internship img, .talent img{
+    margin-bottom: 3rem;
+}
+.training p, .internship p, .talent p{
+    line-height: 24px;
+    margin-bottom: 1.5rem;
+    font-size: 14px;
+    opacity: 0.9;
+    height: 150px;
+}
+
+
+footer{
+    margin: 13rem auto 0 auto;
+    width: 90%;
+}
+.upper-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-logo, .links, .contact, .social{
+    flex: 25%;
+}
+hr{
+    margin: 5rem auto 3rem auto;
+    max-width: 1200px;
+}
+.upper-footer .contact{
+    width: 250px;
+    margin: 0 auto;
+}
+.upper-footer .contact p{
+    opacity: 0.7;
+    font-size: 15px;
+    line-height: 24px;
+}
+footer h2{
+    margin-bottom: 0.5rem;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+.social-links img{
+    width: 100%;
+}
+
+.copyright{
+    margin-bottom: 7rem;
+}
+
+@media (min-width: 768px){
+    .hero-header{
+        height: 90px;
+    }
+    .cta{
+        margin: 5rem auto;
+        padding: 1%;
+    }
+    .cta p{
+        width: 100%;
+    }
+    .cta h1{
+        font-size: 32px;
+        width: 100%;
+    }
+    .cta-buttons{
+        flex-direction: row;
+        align-items: center;
+        padding: 0 70px;
+        width: 100%;
+    }
+    .cta-btn{
+        margin-bottom: 0;
+    }
+    .hero-header img{
+        height: 22%;
+        width: 22%;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .upper-footer .contact{
+        width: 250px;
+        margin: 0
+    }
+    .upper-footer{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer-logo{
+        padding-top: 3px;
+    }
+    .upper-footer h2{
+        font-size: 16px;
+    }
+    .social-links {
+        width: 40%;
+    }
+
+}
+
+@media(min-width:768px) and (max-width:991px){
+    .hero-container{
+        min-height: 50vh;
+    }
+}
+
+@media(min-width: 992px){
+    .zuri-groups{
+        display: flex;
+        margin: 0 auto;
+    }
+    .team-container{
+        margin-top: 9rem;
+        position: relative;
+    }
+    .training p, .internship p, .talent p{
+        font-size: 15px;
+    }
+}
+
+@media(min-width: 1200px){
+    .zuri-groups{
+        max-width: 1200px;
+    }
+    .dot{
+        display: block;
+        width: 30%;
+        height: 75%;
+        position: absolute;
+        z-index: -1;
+        top: 15%;
+    }
+    .dot2{
+        left: -5%;
+    }
+
+    .dot1{
+        right: -5%;
+        height: 65%;
+    }
+}
+
