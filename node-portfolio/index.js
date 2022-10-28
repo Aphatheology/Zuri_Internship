@@ -1,4 +1,3 @@
-// import http from 'http';
 const http = require("http");
 const fs = require("fs");
 
@@ -6,6 +5,7 @@ const PORT = 3030;
 
 let server = http.createServer((request, response) => {
     const { url } = request;
+    
     switch (url) {
         case "/":
             {
@@ -23,7 +23,6 @@ let server = http.createServer((request, response) => {
                 response.setHeader("Location", "/");
                 response.end();
             }
-
             break;
 
         case "/about":
@@ -45,6 +44,7 @@ let server = http.createServer((request, response) => {
                 });
             }
             break;
+
         default: {
             response.writeHead(404, { "Content-Type": "text/html" });
             response.end("<h1>Not Found</h1>");
