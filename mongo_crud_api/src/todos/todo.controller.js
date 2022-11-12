@@ -17,10 +17,7 @@ const getTodoById = catchAsync(async (req, res) => {
 });
 
 const updateTodo = catchAsync(async (req, res) => {
-    const todo = await todoService.updateTodo(
-        req.params.id,
-        req.body
-    );
+    const todo = await todoService.updateTodo(req.params.id, req.body);
     res.send(todo);
 });
 

@@ -10,15 +10,18 @@ const getAllTodos = async (query) => {
     let size = query.size ? Number(query.size) : 10;
 
     if (isNaN(page)) page = 1;
-        if (isNaN(size)) size = 10;
-    const todos = await Todos.find({}).skip(size * (page - 1)).limit(size);
+    if (isNaN(size)) size = 10;
     
+    const todos = await Todos.find({})
+        .skip(size * (page - 1))
+        .limit(size);
+
     return {
         page: page,
         page_size: todos.length,
         total_count: await Todos.countDocuments(),
         data: todos,
-    }
+    };
 };
 
 const createTodo = async (todoBody) => {
@@ -31,14 +34,13 @@ const createTodo = async (todoBody) => {
 
 const getTodoById = async (todoId) => {
     let todo = await Todos.findById(todoId);
-    
 
     if (!todo) {
         throw new Error("Todo not found");
     }
-    
+
     return todo;
-}
+};
 
 const updateTodo = async (todoId, todoBody) => {
     let todo = await Todos.findById(todoId);

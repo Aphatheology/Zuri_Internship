@@ -9,16 +9,16 @@ const todoSchema = new mongoose.Schema(
         },
         description: {
             type: String,
-            required: true
+            required: true,
         },
     },
     {
         timestamps: {
-            createdAt: 'timestamp',
-            updatedAt: false
+            createdAt: "timestamp",
+            updatedAt: false,
         },
-        versionKey: false
-    },
+        versionKey: false,
+    }
 );
 
 module.exports = mongoose.model("Todo", todoSchema);
